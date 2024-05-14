@@ -9,7 +9,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "patch": "pnpm build && pnpm version patch && git push && pnpm publish --access=public",
+    "minor": "pnpm build && pnpm version minor && git push && pnpm publish --access=public",
+    "major": "pnpm build && pnpm version major && git push && pnpm publish --access=public"
   },
   "devDependencies": {
     "fake-indexeddb": "^5.0.2",
